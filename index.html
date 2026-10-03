@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBox AI</title>
+    <meta
+      name="description"
+      content="ChatBox AI — a ChatGPT-inspired assistant interface with a blue and yellow theme."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-icon">C</div>
+          <div class="brand-text">ChatBox AI</div>
+        </div>
+
+        <button class="new-chat-btn">
+          <span class="plus">✦</span>
+          New chat
+        </button>
+
+        <nav class="chat-list" aria-label="Chat history">
+          <div class="chat-item active">
+            <span>Product launch plan</span>
+          </div>
+          <div class="chat-item">
+            <span>Branding ideas</span>
+          </div>
+          <div class="chat-item">
+            <span>Website copy rewrite</span>
+          </div>
+          <div class="chat-item">
+            <span>Marketing strategy</span>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-card">
+            <div class="avatar">N</div>
+            <div>
+              <strong>Nasii</strong>
+              <small>Pro Plan</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-btn" aria-label="Menu">☰</button>
+            <div class="model-label">GPT-4o</div>
+          </div>
+          <div class="topbar-right">
+            <button class="icon-btn" aria-label="Share">↗</button>
+            <button class="icon-btn" aria-label="Settings">⚙</button>
+          </div>
+        </header>
+
+        <section class="messages" id="messages" aria-live="polite">
+          <div class="message-row assistant">
+            <div class="avatar assistant-avatar">AI</div>
+            <div class="bubble">
+              Hello! I’m ChatBox AI. Ask me anything, or let’s build something bold,
+              creative, and high-converting.
+            </div>
+          </div>
+
+          <div class="message-row user">
+            <div class="bubble">
+              Design a sleek website for a startup that feels premium and futuristic.
+            </div>
+          </div>
+
+          <div class="message-row assistant">
+            <div class="avatar assistant-avatar">AI</div>
+            <div class="bubble">
+              Absolutely — I’d recommend a dark-blue foundation, soft yellow accents,
+              glassmorphism cards, and a confident modern font pairing to give it that
+              premium AI feel.
+            </div>
+          </div>
+        </section>
+
+        <form class="composer" id="chat-form">
+          <button class="tool-btn" type="button" aria-label="Add attachment">＋</button>
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Message ChatBox AI..."
+            aria-label="Message ChatBox AI"
+          />
+          <button class="send-btn" type="submit" aria-label="Send message">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
