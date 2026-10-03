@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharpCuts Barbershop — Business Poster</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: Arial, sans-serif; color: #FAC775; }
+
+  .poster { width: 800px; margin: 0 auto; background: #1a1a2e; padding: 0; }
+
+  /* Top gold bar */
+  .top-bar { height: 8px; background: #BA7517; }
+  .side-wrap { display: flex; }
+  .left-bar { width: 14px; background: #854F0B; flex-shrink: 0; }
+  .right-bar { width: 14px; background: #854F0B; flex-shrink: 0; }
+  .inner { flex: 1; padding: 0 24px; }
+
+  /* HEADER */
+  .header { background: #0d0d1f; border-bottom: 5px solid #BA7517; padding: 22px 28px; display: flex; align-items: center; gap: 24px; margin-bottom: 0; }
+  .logo-circle { width: 70px; height: 70px; border-radius: 50%; background: #BA7517; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-svg { width: 44px; height: 44px; }
+  .brand h1 { font-size: 36px; font-weight: 700; color: #BA7517; letter-spacing: 1px; }
+  .brand p { font-size: 16px; color: #EF9F27; margin-top: 2px; }
+  .brand small { font-size: 12px; color: #633806; }
+  .location-pill { margin-left: auto; background: #BA7517; color: #1a1a2e; padding: 8px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+
+  /* SECTIONS */
+  .section-title { font-size: 12px; font-weight: 700; color: #BA7517; letter-spacing: 2px; margin: 22px 0 6px; border-bottom: 0.5px solid #BA7517; padding-bottom: 4px; }
+
+  /* SERVICES GRID */
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px; }
+  .services-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .card { background: #0d0d1f; border: 0.5px solid #854F0B; border-radius: 10px; overflow: hidden; padding-bottom: 12px; }
+  .card-top { height: 5px; background: #BA7517; }
+  .card-top.mid { background: #854F0B; }
+  .card-top.dark { background: #633806; }
+  .card h3 { font-size: 13px; font-weight: 700; color: #EF9F27; text-align: center; margin: 10px 8px 4px; }
+  .card p { font-size: 11px; color: #FAC775; text-align: center; margin: 0 8px 2px; line-height: 1.4; }
+  .card .price { font-size: 12px; font-weight: 700; color: #BA7517; text-align: center; margin-top: 6px; }
+
+  /* CUSTOMERS */
+  .customers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: #0d0d1f; border: 0.5px solid #854F0B; border-radius: 10px; padding: 14px; }
+  .cust { background: #BA7517; border-radius: 8px; padding: 10px 6px; text-align: center; }
+  .cust.mid { background: #639922 !important; }
+  .cust.dark2 { background: #854F0B; }
+  .cust.darkest { background: #412402; }
+  .cust p { font-size: 12px; font-weight: 700; color: #1a1a2e; line-height: 1.4; }
+  .cust.dark2 p, .cust.darkest p { color: #FAC775; }
+
+  /* REVENUE */
+  .revenue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
+  .rev-card { background: #0d0d1f; border: 0.5px solid #854F0B; border-radius: 10px; overflow: hidden; padding-bottom: 12px; }
+  .rev-card h3 { font-size: 13px; font-weight: 700; color: #EF9F27; text-align: center; margin: 10px 8px 4px; }
+  .rev-card p { font-size: 11px; color: #FAC775; text-align: center; margin: 0 8px 3px; }
+  .rev-card .amount { font-size: 13px; font-weight: 700; color: #BA7517; text-align: center; margin-top: 6px; }
+  .rev-card .pct { font-size: 11px; color: #633806; text-align: center; }
+  .total-banner { background: #BA7517; border-radius: 10px; padding: 12px 20px; text-align: center; color: #1a1a2e; font-size: 13px; font-weight: 700; margin-bottom: 0; }
+
+  /* COMMUNITY */
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .impact-card { background: #0d0d1f; border: 0.5px solid #854F0B; border-radius: 10px; padding: 14px 16px; }
+  .impact-card h3 { font-size: 13px; font-weight: 700; color: #EF9F27; margin-bottom: 4px; }
+  .impact-card p { font-size: 11px; color: #FAC775; line-height: 1.5; }
+  .impact-icon { font-size: 16px; margin-right: 6px; }
+
+  /* FOOTER */
+  .footer { background: #0d0d1f; border-top: 0.5px solid #BA7517; text-align: center; padding: 14px; margin-top: 22px; }
+  .footer p { font-size: 12px; color: #EF9F27; }
+  .footer small { font-size: 10px; color: #633806; }
+  .bottom-bar { height: 8px; background: #BA7517; }
+
+  .spacer { height: 0; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="top-bar"></div>
+  <div class="side-wrap">
+    <div class="left-bar"></div>
+    <div class="inner">
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="logo-circle">
+          <svg class="logo-svg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <!-- Scissors -->
+            <line x1="12" y1="12" x2="32" y2="32" stroke="#1a1a2e" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="32" y1="12" x2="12" y2="32" stroke="#1a1a2e" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="22" cy="22" r="4" fill="#1a1a2e"/>
+            <circle cx="12" cy="12" r="6" fill="none" stroke="#1a1a2e" stroke-width="2.5"/>
+            <circle cx="32" cy="32" r="6" fill="none" stroke="#1a1a2e" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="brand">
+          <h1>SharpCuts</h1>
+          <p>Barbershop</p>
+          <small>Look sharp. Feel confident. Every time.</small>
+        </div>
+        <div class="location-pill">Accra, Ghana · Est. 2025</div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="section-title">SERVICES WE OFFER</div>
+      <div class="services-grid">
+        <div class="card"><div class="card-top"></div><h3>Haircuts</h3><p>Classic, fade, taper &amp; low cut</p><div class="price">GH₵ 30–60</div></div>
+        <div class="card"><div class="card-top mid"></div><h3>Beard Trim</h3><p>Shape, line-up &amp; hot towel shave</p><div class="price">GH₵ 20–40</div></div>
+        <div class="card"><div class="card-top dark"></div><h3>Kids Cuts</h3><p>Fun, gentle cuts for boys</p><div class="price">GH₵ 20–35</div></div>
+        <div class="card"><div class="card-top"></div><h3>Hair Designs</h3><p>Custom patterns &amp; inscriptions</p><div class="price">GH₵ 50–100</div></div>
+      </div>
+      <div class="services-row2">
+        <div class="card"><div class="card-top"></div><h3>Home &amp; Office Visits</h3><p>We come to you — book via WhatsApp · +GH₵ 30 travel fee</p></div>
+        <div class="card"><div class="card-top mid"></div><h3>Hair Products Shop</h3><p>Pomades, clippers &amp; sprays · Retail &amp; wholesale</p></div>
+      </div>
+
+      <!-- CUSTOMERS -->
+      <div class="section-title">TARGET CUSTOMERS</div>
+      <div class="customers">
+        <div class="cust"><p>Young Men<br>Ages 15–35</p></div>
+        <div class="cust dark2"><p>Working Men<br>&amp; Professionals</p></div>
+        <div class="cust darkest"><p>Students<br>School &amp; Uni</p></div>
+        <div class="cust mid"><p>Families<br>&amp; Boys</p></div>
+      </div>
+
+      <!-- REVENUE -->
+      <div class="section-title">HOW THE BUSINESS MAKES MONEY</div>
+      <div class="revenue-grid">
+        <div class="rev-card"><div class="card-top"></div><h3>Daily Walk-ins</h3><p>10–15 clients/day avg. GH₵ 40/cut</p><div class="amount">~GH₵ 1,800/week</div><div class="pct">50% of revenue</div></div>
+        <div class="rev-card"><div class="card-top mid"></div><h3>Home Visits</h3><p>Premium service, higher charge</p><div class="amount">~GH₵ 600/week</div><div class="pct">20% of revenue</div></div>
+        <div class="rev-card"><div class="card-top dark"></div><h3>Product Sales</h3><p>Resell grooming products in shop</p><div class="amount">~GH₵ 900/week</div><div class="pct">30% of revenue</div></div>
+      </div>
+      <div class="total-banner" style="margin-top:10px;">Estimated Monthly Revenue: GH₵ 12,000–15,000 &nbsp;|&nbsp; Net Profit: ~GH₵ 7,000/month</div>
+
+      <!-- COMMUNITY -->
+      <div class="section-title">WHY THIS BUSINESS MATTERS TO THE COMMUNITY</div>
+      <div class="impact-grid">
+        <div class="impact-card"><h3>🌍 Youth Employment</h3><p>Trains &amp; hires young barbers in the neighbourhood</p></div>
+        <div class="impact-card"><h3>✂️ Affordable Grooming</h3><p>Quality haircuts at fair prices for all income levels</p></div>
+        <div class="impact-card"><h3>🤝 Safe Social Space</h3><p>A trusted gathering place where men connect &amp; unwind</p></div>
+        <div class="impact-card"><h3>💪 Confidence Builder</h3><p>Looking good boosts self-esteem &amp; pride in the community</p></div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <p>Book via WhatsApp · @SharpCutsGH · Accra, Ghana</p>
+        <small>© 2025 SharpCuts Barbershop · Proudly Ghanaian</small>
+      </div>
+
+    </div>
+    <div class="right-bar"></div>
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>
